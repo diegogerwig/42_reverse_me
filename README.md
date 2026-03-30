@@ -3,11 +3,11 @@ objdump -d ./level* > levelx.asm
 
 
 
-GHIDRA
+DECOMPILER EXPLORER
 
 https://dogbolt.org/
 
-
+GHIDRA
 
 
 COMPILAR Y EJECUTAR
