@@ -7,7 +7,6 @@ int main(void)
 	char input[24];
 	char output[9];
 	char tmp[4];
-	int i, idx;
 	char *secret= "delabere";
 
 	printf("Please enter key: ");
@@ -23,11 +22,12 @@ int main(void)
 		exit(1);
 	}
 
+	fflush(stdin);
 	memset(output, 0, 9); 
 	output[0] = 'd';	  
 
 	int position_read = 2;   
-	int position_escritura = 1; 
+	int position_write = 1; 
 
 	while (strlen(output) < 8 && position_read < (int)strlen(input))
 	{
@@ -37,10 +37,10 @@ int main(void)
 		tmp[3] = '\0'; 
 
 		int codigo_ascii = atoi(tmp);
-		output[position_escritura] = (char)codigo_ascii;
+		output[position_write] = (char)codigo_ascii;
 
 		position_read += 3;	
-		position_escritura += 1; 
+		position_write += 1; 
 	}
 
 	if (strcmp(output, secret) == 0)
