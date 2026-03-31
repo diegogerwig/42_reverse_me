@@ -4,12 +4,13 @@
 int main(void)
 {
 	char user_input[100];
+	char *secret = "__stack_check";
 
 	printf("Please enter key: ");
 
 	scanf("%s", user_input);
 
-	if (strcmp(user_input, "__stack_check") == 0)
+	if (strcmp(user_input, secret) == 0)
 	{
 		printf("Good job.\n");
 	}
