@@ -26,7 +26,7 @@ int main(void)
 		nope();
 	}
 
-	if (input[1] != '2' || input[0] != '4')
+	if (input[0] != '4' || input[1] != '2')
 	{
 		nope();
 	}
